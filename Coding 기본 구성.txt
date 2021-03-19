@@ -1,0 +1,50 @@
+# Import necessary libraries
+
+
+# Fix the gpu memory issue (failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED)
+config = tf.compat.v1.ConfigProto()
+config.gpu_options.per_process_gpu_memory_fraction = 0.3  # NOTE: <=0.3 with GTX 1050 (2GB)
+session = tf.compat.v1.Session(config=config)
+
+
+# Set the value of hyper-parameters
+
+
+
+# Load the dataset 
+
+
+
+# Preprocess the dataset
+# Data-type conversion
+# Normalization
+# One-hot encoding
+
+
+
+# Build a VGG19 architecture
+# Input
+# block 1
+# block 2
+# block 3
+# block 4
+# block 5
+# Fully connected (FC)
+
+
+
+# Create a model
+
+
+
+# Compile the model
+
+
+
+# Train the model to adjust parameters to minimize the loss
+
+
+
+# Predict the model with test set
+
+
