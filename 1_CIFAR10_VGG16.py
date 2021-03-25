@@ -222,9 +222,9 @@ vgg16.compile(loss='categorical_crossentropy',  # 'sparse_categorical_crossentro
 
 # Fix the gpu memory issue
 # Error: failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED
-config = tf.compat.v1.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.3  # <=0.3 with GTX 1050 (2GB)
-session = tf.compat.v1.Session(config=config)
+#config = tf.compat.v1.ConfigProto()
+#config.gpu_options.per_process_gpu_memory_fraction = 0.3  # <=0.3 with GTX 1050 (2GB)
+#session = tf.compat.v1.Session(config=config)
 
 # Train the model
 # tf.keras.Model.fit(x=None, y=None, batch_size=32, epochs=1,
