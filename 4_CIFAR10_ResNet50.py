@@ -14,16 +14,14 @@ import tensorflow as tf
 from tensorflow.keras.layers import ZeroPadding2D, Conv2D, Activation, BatchNormalization, MaxPooling2D, GlobalAveragePooling2D, Flatten, Dense
 from tensorflow.keras import Input, Model
 
-# Fix the gpu memory issue
-#config = tf.compat.v1.ConfigProto()
-#config.gpu_options.per_process_gpu_memory_fraction = 0.3  # <=0.3 with GTX 1050 (2GB)
-#session = tf.compat.v1.Session(config=config)
-
 # Set the value of hyper-parameters
 EPOCHS = 20
 LEARNING_RATE = 0.0001
 BATCH_SIZE = 16
 VERBOSE = 1
+
+# Results
+# ==> - loss: 1.3629 - accuracy: 0.7036
 
 # Load the dataset
 cifar10 = tf.keras.datasets.cifar10
