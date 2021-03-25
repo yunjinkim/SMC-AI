@@ -44,6 +44,9 @@ VERBOSE = 1
 # ==> EPOCHS=30; LEARNING_RATE=0.0001; BATCH_SIZE=32; UPSAMPLING_SIZE=(2,2); loss: 0.9695 - accuracy: 0.8239
 
 
+# Results
+# ==> - loss: 1.2093 - accuracy: 0.7754
+
 # Load the dataset
 cifar10 = tf.keras.datasets.cifar10
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
