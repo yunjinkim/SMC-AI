@@ -23,11 +23,6 @@ import tensorflow as tf
 from tensorflow.keras import Input, Model
 from tensorflow.keras.layers import UpSampling2D, Conv2D, MaxPooling2D, Flatten, Dropout, Dense, BatchNormalization, Activation
 
-# Fix the gpu memory issue (failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED)
-#config = tf.compat.v1.ConfigProto()
-#config.gpu_options.per_process_gpu_memory_fraction = 0.3  # NOTE: <=0.3 with GTX 1050 (2GB)
-#session = tf.compat.v1.Session(config=config)
-
 # Set the value of hyper-parameters
 IMG_ROWS, IMG_COLS, IMG_CHANNELS = 32, 32, 3
 IMG_SHAPE = (IMG_ROWS, IMG_COLS, IMG_CHANNELS)
@@ -37,6 +32,9 @@ EPOCHS = 20
 LEARNING_RATE = 0.0001
 BATCH_SIZE = 16
 VERBOSE = 1
+
+# Results
+# ==> - loss: 0.7698 - accuracy: 0.8141
 
 # Load the dataset
 cifar10 = tf.keras.datasets.cifar10
